@@ -1,3 +1,4 @@
+import About from "./Components/About/About";
 import Hero from "./Components/Hero/Hero";
 import Navbar from "./Components/Navbar/Navbar";
 import Program from "./Components/Program/Program";
@@ -9,8 +10,9 @@ const App = () => {
       <Navbar></Navbar>
       <Hero></Hero>
       <div className="container">
-        <Title></Title>
+        <Title subTitle="OUR PROGRAM" title="What We Offer"></Title>
         <Program></Program>
+        <About></About>
       </div>
     </div>
   );
