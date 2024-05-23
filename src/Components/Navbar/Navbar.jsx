@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import logo from "../../assets/logo.png";
+import menu_icon from "../../assets/menu-icon.png";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
+  const [menuOpen, setmenuOpen] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -12,10 +14,14 @@ const Navbar = () => {
     });
   }, []);
 
+  const toggleMenu = () => {
+    menuOpen ? setmenuOpen(false) : setmenuOpen(true);
+  };
+
   return (
     <nav className={`container ${menu ? "main-menu" : " "}`}>
-      <img src={logo} alt="logo" />
-      <ul>
+      <img src={logo} alt="logo" className="logo" />
+      <ul className={menuOpen ? "" : "hide-mobile-menu"}>
         <li>
           {" "}
           <Link to="hero" smooth={true} offset={0} duration={500}>
@@ -59,6 +65,12 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
+      <img
+        src={menu_icon}
+        alt="menu-icon"
+        className="menu-icon"
+        onClick={toggleMenu}
+      />
     </nav>
   );
 };
