@@ -1,6 +1,6 @@
 # Edusity Project
 
-A complete responsive college Website In React.
+A complete responsive college Website using React.
 
 #### Technology Used:
 
@@ -8,4 +8,4 @@ A complete responsive college Website In React.
 - Web3 form for contact form submission
 - React smooth scroll for smooth scrolling
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+Website Link: [(https://edusity-hazel.vercel.app/)]
