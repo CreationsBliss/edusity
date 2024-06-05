@@ -2,12 +2,17 @@ import about from "../../assets/about.png";
 import play_icon from "../../assets/play-icon.png";
 import "./About.css";
 
-const About = () => {
+const About = ({ setPlayState }) => {
   return (
     <section className="about">
       <div className="about-left">
         <img src={about} alt="about" className="about-image" />
-        <img src={play_icon} alt="Play-icon" className="play-image" />
+        <img
+          src={play_icon}
+          alt="Play-icon"
+          className="play-image"
+          onClick={() => setPlayState(true)}
+        />
       </div>
 
       <div className="about-right">
